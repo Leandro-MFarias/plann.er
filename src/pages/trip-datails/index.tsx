@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CreateActivityModal } from "./create-activity-modal";
 import { ImportantLinks } from "./important-links";
 import { Guests } from "./guests";
-import { Activity } from "./activities";
+import { Activities } from "./activities";
 import { DestinationAndDateHeader } from "./destination-and-date-header";
 
 export function TripDatailsPage() {
@@ -31,7 +31,7 @@ export function TripDatailsPage() {
                         </button>
                     </div>
 
-                    <Activity />
+                    <Activities />
                 </div>
 
                 <div className="w-80 space-y-6">

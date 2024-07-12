@@ -14,10 +14,10 @@ export function CreateTripPage() {
     const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
     const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false)
 
-    const [ destination, setDestination ] = useState('')
-    const [ ownerName, setOwnerName ] = useState('')
-    const [ ownerEmail, setOwnerEmail ] = useState('')
-    const [ eventStartAndEndDates, setEventStartAndEndDates ] = useState<DateRange | undefined>()
+    const [destination, setDestination] = useState('')
+    const [ownerName, setOwnerName] = useState('')
+    const [ownerEmail, setOwnerEmail] = useState('')
+    const [eventStartAndEndDates, setEventStartAndEndDates] = useState<DateRange | undefined>()
 
     const [emailsToInvite, setEmailsToInvite] = useState([
         'leandro@gmail.com',
@@ -83,15 +83,15 @@ export function CreateTripPage() {
         console.log(ownerName)
         console.log(ownerEmail)
 
-        if(!destination) {
+        if (!destination) {
             return
         }
 
-        if(!eventStartAndEndDates?.from || !eventStartAndEndDates?.to) {
+        if (!eventStartAndEndDates?.from || !eventStartAndEndDates?.to) {
             return
         }
 
-        if(emailsToInvite.length === 0) {
+        if (emailsToInvite.length === 0) {
             return
         }
 
@@ -105,7 +105,7 @@ export function CreateTripPage() {
             ends_at: eventStartAndEndDates.to,
             emails_to_invite: emailsToInvite,
             owner_name: ownerName,
-            owner_email: ownerEmail,
+            owner_email: ownerEmail
         })
 
         const { tripId } = response.data
